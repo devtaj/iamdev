@@ -71,7 +71,89 @@ html{
     align-items: center;
 
 }
+.social-links-sidebar {
+    position: fixed;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    z-index: 1000;
+}
+.social-links-sidebar a i{
+    color: rgb(212, 174, 3);
+}
+/* Line above */
+.social-links-sidebar::before {
+    content: "";
+    width: 1px;
+    height: 6rem;
+    background: rgb(212, 174, 3);
+}
+
+/* Line below */
+.social-links-sidebar::after {
+    content: "";
+    width: 1px;
+    height: 6rem;
+    background:  rgb(212, 174, 3);
+}
+/* ======================gmail sidebar=============================*/
+.gmail-sidebar {
+    position: fixed;
+    right: 1.25rem;
+    top: 80%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+/* Top line */
+.gmail-sidebar::before {
+    content: "";
+    width: 1px;
+    height: 6rem;
+    background:  rgb(212, 174, 3);
+}
+
+/* Bottom line */
+.gmail-sidebar::after {
+    content: "";
+    width: 1px;
+    height: 6rem;
+    background:  rgb(212, 174, 3);
+}
+
+.gmail-sidebar a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    color:rgb(212, 174, 3);
+    text-decoration: none;
+}
+
+.gmail-sidebar span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.gmail-sidebar i {
+    font-size: 1.2rem;
+}
+/* ========================End============================== */
 
 .nav a {
     text-decoration: none;
@@ -1056,6 +1138,14 @@ section {
     .logo{
         display: grid;
         grid-template-columns: 1fr;
+    }
+    .gmail-sidebar{
+        position: fixed;
+        right: 0.25rem;
+    }
+    .social-links-sidebar{
+        position: fixed;
+        left:0.5rem;
     }
    .nav {
     display: flex;
